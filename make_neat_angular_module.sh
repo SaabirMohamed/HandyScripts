@@ -22,11 +22,11 @@
 # I know that a python or some other script can be used to capitalize the variable but 
 # this is inside a bash so its just quicker then writing more code
 # CONSTRUCTING THE ROUTE STRING 
-echo // {path: '$1', loadChildren: '../modules/$1/$1.module#$2Module'}, >> src/app/app-routing.module.ts
+echo // {path: \'$1\', loadChildren: \'../modules/$1/$1.module#$2Module\'}, >> src/app/app-routing.module.ts
 # you still need a string in the component which is default to the module...
 ng g m modules/$1 --routing && cd src/app/modules/$1 && ng g c $1 && cd ../../../../
 # CONTRUCTIN THE STRING FOR THE ROUTE IN THE MODULE CREATED
-echo // import { %1Component } from './$1.component' >> src/app/modules/$1/$1-routing.module.ts
-echo // import { %1Component } from './$1.component'
-echo // {path: '', component: $1Component },
-echo // {path: '', component: $1Component }, >> src/app/modules/$1/$1-routing.module.ts
+echo // import { $1Component } from \'./$1.component\' >> src/app/modules/$1/$1-routing.module.ts
+echo // import { $1Component } from \'./$1.component\'
+echo // {path: \'\', component: $1Component },
+echo // {path: \'\', component: $2Component }, >> src/app/modules/$1/$1-routing.module.ts
