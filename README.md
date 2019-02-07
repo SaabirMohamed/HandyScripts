@@ -34,7 +34,7 @@ import {HomeComponent} from './home.component';
 ### Instrctions for the cpp program:
 ` PutTextInDiv ` 
 
-> Put text into a file name it qsource.txt when the program is run it will wrap whatever html you want around each line. [soon i will make it except params for csv genration or other wraps] for now just use the source file as qsource.txt and pipe out to a file using `>> filename.html `.
+> Put some text into a file, name it `qsource.txt` when the program is run it will wrap whatever html you want around each line. [soon i will make it except params for csv genration or other wraps] for now just use the source file as qsource.txt and pipe out to a file using `>> filename.html `.
 ```
 $./PutTextInDiv >> html_version.html
 
