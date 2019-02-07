@@ -7,25 +7,27 @@
 
 ### Instructions for the bash script: 
 ` make_a_neat_angular_module.sh ` 
-> In your terminal just pass in the module name twice once in all lower case and once capitalised. you should also run this from the cloned folder
+> In your terminal just pass in the module name twice once in all lower case and once capitalised. you can also run this from the cloned folder
 ```
- ln -s /fullPathToScript.sh mmm && sudo chmod +x /usr/local/bin/mmm
+ ln -s make_a_neat_angular_module.sh /usr/local/bin/mmm && sudo chmod +x /usr/local/bin/mmm
  
  ```
-> This creates a link for convenience... now you can modify and save the source file and "mmm" will be the way you execute the command , please note that you must be in the root folder of your angular project
+> This creates a link for convenience... now you can modify and save the source file and "mmm" will be the way you execute the command , please note that you must be in the root folder of your angular project,
 ``` 
-$ mmm home Home // where home is the name of the lazy module
+$ mmm home Home // where home is the name of the lazy module you want to create with routing and route strings all done!
 
 ```
 #### This is what the script does
-* creates the module with angular cli's routing flag
-* creates a component which acts as the default loaded component (my usual pattern)
-* appends the default app-routing.module.ts file with the constructed string for a lasy loaded module.
+
+* creates the module with angular cli's routing flag [basically this : ng g m home --routing]
+* creates a component which acts as the default loaded component inside the new lazy laoded module [ng g c modules/home] 
+* appends the default app-routing.module.ts file with the constructed string for a lazy loaded module.
+  
  ```
- { path: 'home', loadChildren: 'modules/home/home.module#HomeModule'}
+ { path: 'home', loadChildren: 'modules/home/home.module#HomeModule'} // back in the day I had to manually do this for each module.
  ```
- these generated strings which you will normally have to navigate around the project to type out manually are appended as comments at the bottom of the target files for now (you can just cut and paste and you done)
-* finally it generates the "comment" in the module route with 
+ these generated strings which you will normally have to navigate around the project to type out manually are appended as comments at the bottom of the target files for now (nothing fancy, you can just cut and paste and you done)
+* finally appends this to the modules root component 
 ```
 import {HomeComponent} from './home.component';
 {path: '', component: HomeComponent}
