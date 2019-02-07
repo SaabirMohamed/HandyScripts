@@ -1,8 +1,8 @@
 # Some handy scripts I made for   day to day coding.
 
 ## Whats in here...
-1 . Inside Bash/.. --> make_a_neat_angular_module.sh (you can make the name smaller.)
-2 . Indide Cpp/.. --> PutTextInDiv reads a file called "qsource.txt" and puts each line in a div and its text in a p elelment cpp programs (the bin and the source)
+1. Inside Bash/.. --> make_a_neat_angular_module.sh (you can make the name smaller.)
+2. Indide Cpp/.. --> PutTextInDiv reads a file called "qsource.txt" and puts each line in a div and its text in a p elelment cpp programs (the bin and the source)
 
 
 ### How to :
