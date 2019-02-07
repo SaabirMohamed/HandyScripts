@@ -8,7 +8,10 @@
 ### Instructions for the bash script: 
 ` make_a_neat_angular_module.sh ` 
 > In your terminal just pass in the module name twice once in all lower case and once capitalised. you should also run this from the cloned folder
-``` ln -s /fullPathToScript.sh mmm && sudo chmod +x /usr/local/bin/mmm ```
+```
+ ln -s /fullPathToScript.sh mmm && sudo chmod +x /usr/local/bin/mmm
+ 
+ ```
 > This creates a link for convenience... now you can modify and save the source file and "mmm" will be the way you execute the command , please note that you must be in the root folder of your angular project
 ``` 
 $ mmm home Home // where home is the name of the lazy module
@@ -29,6 +32,8 @@ import {HomeComponent} from './home.component';
 ```
 
 ### Instrctions for the cpp program:
+` PutTextInDiv ` 
+
 > Put text into a file name it qsource.txt when the program is run it will wrap whatever html you want around each line. [soon i will make it except params for csv genration or other wraps] for now just use the source file as qsource.txt and pipe out to a file using `>> filename.html `.
 ```
 $./PutTextInDiv >> html_version.html
