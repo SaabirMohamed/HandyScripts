@@ -5,6 +5,7 @@
 ## Whats in here...
 1. Bash/... shell scripts I will place in here
 2. cpp/... C++ programs and tools
+3. thisIsNotSafe.sh ... [more laziness ]
 
 
 ### Instructions for the bash script: 
