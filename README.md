@@ -6,7 +6,7 @@
 
 
 ### How to :
-> In your terminal just pass in the module name twice once in all loawer case and once capitalised. you should also run this from the cloned folder
+> In your terminal just pass in the module name twice once in all lower case and once capitalised. you should also run this from the cloned folder
 ``` ln -s /fullPathToScript.sh mmm && sudo chmod +x /usr/local/bin/mmm ```
 > This creates a link for convenience ,,,, now you can use it like this, please note that you must be in the root folder of you angular project
 ``` 
