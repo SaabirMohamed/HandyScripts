@@ -1,8 +1,10 @@
-# Some handy custom scripts and programs I wrote.
+# Some handy custom scripts and programs I made.
+#### Angular 2 to 7, Lazy module maker
+#### cpp wrap divs' spans' p elements around lines or words in a file. 
 
 ## Whats in here...
-1. Bash/... shell scripts
-2. Cpp/... C++ programs and tools
+1. Bash/... shell scripts I will place in here
+2. cpp/... C++ programs and tools
 
 
 ### Instructions for the bash script: 
@@ -20,8 +22,8 @@ $ mmm home Home // where home is the name of the lazy module you want to create 
 #### This is what the script does
 
 * creates the module with angular cli's routing flag [basically this : ng g m home --routing]
-* creates a component which acts as the default loaded component inside the new lazy laoded module [ng g c modules/home] 
-* appends the default app-routing.module.ts file with the constructed string for a lazy loaded module.
+* creates a component which acts as the default loaded component inside the new lazy loaded module [ng g c modules/home] 
+* appends the default app-routing.module.ts file with the constructed string for a lazy loaded module's route path. so you dont h...a...v...e  t..o  t...y...p...e  o...u...t  s...o  m...u...c...h boilerplate code.
   
  ```
  { path: 'home', loadChildren: 'modules/home/home.module#HomeModule'} // back in the day I had to manually do this for each module.
