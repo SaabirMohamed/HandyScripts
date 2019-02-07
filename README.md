@@ -1,11 +1,11 @@
-# Some handy scripts I made for   day to day coding.
+# Some handy custom scripts and programs I wrote.
 
 ## Whats in here...
-1. Inside Bash/.. --> make_a_neat_angular_module.sh (you can make the name smaller.)
-2. Indide Cpp/.. --> PutTextInDiv reads a file called "qsource.txt" and puts each line in a div and its text in a p elelment cpp programs (the bin and the source)
+1. Bash/... shell scripts
+2. Cpp/... C++ programs and tools
 
 
-### How to for the bash script:
+### Instructions for the bash script:
 > In your terminal just pass in the module name twice once in all lower case and once capitalised. you should also run this from the cloned folder
 ``` ln -s /fullPathToScript.sh mmm && sudo chmod +x /usr/local/bin/mmm ```
 > This creates a link for convenience... now you can modify and save the source file and "mmm" will be the way you execute the command , please note that you must be in the root folder of your angular project
@@ -23,7 +23,7 @@ import {HomeComponent} from './home.component';
 
 ```
 
-### How to for the cpp program:
+### Instrctions for the cpp program:
 > Put text into a file name it qsource.txt when the program is run it will wrap whatever html you want around each line. [soon i will make it except params for csv genration or other wraps] for now just use the source file as qsource.txt and pipe out to a file using `>> filename.html `.
 ```
 $./PutTextInDiv >> html_version.html
