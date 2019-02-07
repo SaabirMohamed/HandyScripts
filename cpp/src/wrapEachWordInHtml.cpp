@@ -7,16 +7,18 @@ using namespace std;
 /*
 checking the arguents returns a bool
 */
-// bool checkArgs(int *paramCount, char** paramValues){
-// 	if (paramCount == 0 && paramCount > 3) {
-// 		std::cout << "You must pass in 3 arguments to this program\n The source file \n The Parent tag \n The Child tag";
-// 		std::cout << "Example: wrapHTML myfile.txt <div> <p>";
-// 		std::cout << "Example: wrapHTML myfile.txt <div> <p>";
-// 		return false;
-// 	} else {
-// 		return false;
-// 	}
-// }
+bool checkArgs(int paramCount){
+	if ((paramCount == 0) && (paramCount < 3))  {
+		
+		return true;
+	} else {
+		std::cout << " HELP : \nYou must pass in 3 arguments to this program:\n\n The source file \n The Parent tag \n The Child tag\n";
+		cout << "Check README.md for the syntax\n\n";
+		// std::cout << "\nExample: $./wrapEachlineInHtml myfile.txt <div> <p>\n [escape sequences are needed on the tags]\n\n\n "; // [escape sequeunce needed]
+		// std::cout << "\nExample: $./wrapEachLineInHtml myfile.txt <div> <p>\n\n";
+		return false;
+	}
+}
  
 /*
 std::string split implementation by using delimeter as a character.
@@ -61,8 +63,7 @@ std::vector<std::string> split(std::string stringToBeSplitted, std::string delim
 int main(int argc, char** argv)
 
 {
-//   if (!checkArgs(argc, argv))
-//   return 0;
+  if (!checkArgs(argc)) return 0;
   
   string filename = argv[1];
   string parentTag = argv[2];
