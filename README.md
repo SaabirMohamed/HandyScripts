@@ -45,7 +45,7 @@ import {HomeComponent} from './home.component';
   
 > Yes, you must pass it in the command line exactly like that(for now) with escape chars   
 Will Update the code ... handle just div, p, span, td,  [any tag can be used even custom components] 
-maybe concat to the past in args in the cpp....later
+maybe concat to the past in args in the cpp....later 
 
 #### The files in this repo are just for my specific use cases (others may find them handy too )
 
