@@ -17,8 +17,10 @@ $ mmm home Home // where home is the name of the lazy module
 * creates a component which acts as the default loaded component (my usual pattern)
 * appends the default app-routing.module.ts file with the constructed string for a lasy loaded module. `{ path: 'home', loadChildren: 'modules/home/home.module#HomeModule'}` this is appended as a comment for now (you can just cut and paste and you done)
 * finally it generates the "comment" in the module route with 
-```import {HomeComponent} from './home.component';
-   {path: '', component: HomeComponent}
+```
+import {HomeComponent} from './home.component';
+{path: '', component: HomeComponent}
+
 ```
 
 
