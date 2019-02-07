@@ -8,7 +8,7 @@
 ### How to :
 > In your terminal just pass in the module name twice once in all lower case and once capitalised. you should also run this from the cloned folder
 ``` ln -s /fullPathToScript.sh mmm && sudo chmod +x /usr/local/bin/mmm ```
-> This creates a link for convenience ,,,, now you can use it like this, please note that you must be in the root folder of you angular project
+> This creates a link for convenience... now you can modify and save the source file and "mmm" will be the way you execute the command , please note that you must be in the root folder of you angular project
 ``` 
 $ mmm home Home // where home is the name of the lazy module
 
