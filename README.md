@@ -17,13 +17,14 @@
 $ mmm home Home // where home is the name of the lazy module
 
 ```
+#### This is what the script does
 * creates the module with angular cli's routing flag
 * creates a component which acts as the default loaded component (my usual pattern)
 * appends the default app-routing.module.ts file with the constructed string for a lasy loaded module.
  ```
  { path: 'home', loadChildren: 'modules/home/home.module#HomeModule'}
  ```
- these generated strings which you will normally have to navigate around the project to type out manually are appended as a comments at the botton of the target files for now (you can just cut and paste and you done)
+ these generated strings which you will normally have to navigate around the project to type out manually are appended as comments at the bottom of the target files for now (you can just cut and paste and you done)
 * finally it generates the "comment" in the module route with 
 ```
 import {HomeComponent} from './home.component';
