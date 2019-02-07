@@ -32,14 +32,17 @@ import {HomeComponent} from './home.component';
 
 ```
 
-### Instrctions for the cpp program:
-` PutTextInDiv ` 
+### Instrctions for programs the cpp folder:
+1. ` wrapEachLineInHtml.cpp and the binary ./wrapEachLineInHtml `  
+* Syntax : ` $./wrapEachLineInHtml /<div/> /<p/> `
+2. ` wrapEachWordInHtml.cpp and the binary ./wrapEachWordInHtml `
+* Syntax : ` $./wrapEachWordInHtml /<div/> /<p/> `
+  
+> Yes, you must pass it in the command line exactly like that(for now) with escape chars   
+Will Update the code ... handle just div, p, span, td,  [so any tag can be used even custom components] 
+maybe concat to the past in args in the cpp....later
 
-> Put some text into a file, name it `qsource.txt` when the program is run it will wrap whatever html you want around each line. [soon i will make it except params for csv genration or other wraps] for now just use the source file as qsource.txt and pipe out to a file using `>> filename.html `.
-```
-$./PutTextInDiv >> html_version.html
-
-```
+#### The files in this repo are just for my specific use cases (others may find them handy too )
 
 
 
