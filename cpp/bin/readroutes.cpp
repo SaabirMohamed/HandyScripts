@@ -33,14 +33,10 @@ while (getline (file, temp))
     std::ofstream log(argv[3], std::ios_base::app | std::ios_base::out);
     string temp2;
     while (getline(file2, temp2)) {
-            if (temp2 == "import { Routes, RouterModule } from '@angular/router';") {
-              log << "import { Routes, RouterModule } from '@angular/router';\nimport { " + tagetb +"Component } from './"+ targeta + ".component';\n";
-            }
-            else if(temp2 == "const routes: Routes = [") { //in the first case
-            log << "const routes: Routes = [\n{ path: '" + targeta + "', component: "+ targetb + "Component}\n];";
-            }
-            else {
+            if(temp2 == "const routes: Routes = [") {
+            log << "const routes: Routes = [\n{ path: '" + targeta + "', component: "+ targetb + "Component}\n]";
+            }  else {
             log << temp << "\n";
-            }
+  }
     }
 }
