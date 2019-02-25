@@ -1,12 +1,31 @@
 #!/bin/bash
-echo  CONSTRUCTING THE ROUTE STRING AS A LAZY LOADED MODULE
-echo // {path: \'$1\', loadChildren: \'./modules/$1/$1.module#$2Module\'}, >> src/app/app-routing.module.ts
-echo MAKING THE MODULES...PLUS A DEFAULT COMPONENT...
+# using Angular CLI to create the module and then a default component inside (standard syntax)
 ng g m modules/$1 --routing && ng g c modules/$1
-echo CONTRUCTING THE STRING FOR THE ROUTES IN THE NEWLY CREATED MODULE CREATED
-echo // import { $2Component } from \'./$1.component\'; >> src/app/modules/$1/$1-routing.module.ts
-echo you will find this string added to the $2's default routing file: import { $2Component } from \'./$1.component\';
-echo // {path: \'\', component: $2Component },
-echo // {path: \'\', component: $2Component }, >> src/app/modules/$1/$1-routing.module.ts
-echo JUST PASTE THE GENERATED TEXT IN YOUR ROUTER MODULE AND CREATED MODULE
-echo YOU WILL FIND IT ALREADY SAVED IN THE FILES AS COMMENTS
+
+# Injecting the route using my compiled cpp code. (basically injects a line and outputs results to console by default )
+./injecroute src/app/app-routing.module.ts "];" "   {path: '$1', loadChildren: './modules/$1/$1.module#$2Module'}" > $1.app.routing-out.ts
+
+# Injecting the import statement into the modules default component
+./injecroute src/app/modules/$1/$1-routing.module.ts "];" "   {path: '', component: $2Component }" > $1.module-routing-outa.ts
+
+# coping the modified file to the original angular generated file
+cp $1.module-routing-outa.ts src/app/modules/$1/$1-routing.module.ts
+
+# Injecting the a default route to the modules default component. (that was created above)
+./injecroute src/app/modules/$1/$1-routing.module.ts "const routes: Routes = [" "import {$2Component } from './$1.component';" > $1.module-routing-outb.ts
+
+# coping the second modification into the file
+cp $1.module-routing-outb.ts src/app/modules/$1/$1-routing.module.ts
+
+# Finally copy the to the apps main router file
+cp $1.app.routing-out.ts src/app/app-routing.module.ts
+
+# test your ready to route mozy loaded dule. localhost:4200/[your_new_newroute]
+
+# Future plans
+# inject the modules link to itself into an assumed navigation component [maybe pass in an optional navingation components name]
+# for new just copy and paste the snippet in the file testYournav.html
+echo "\<a routerLink='/$1' \>$1\</a\>" >> tesYourNav.html
+#assuming a ul element exists in the navfile provided in the 3rd argument
+./injectroute src/app/components/navi/navi.component.html "</ul>" "   <li><a routerLink='/$1' >$1 </li>" >> injectedLink.html
+cp injectLink.html src/app/components/navi/navi.component.html

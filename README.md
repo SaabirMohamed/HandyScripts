@@ -20,12 +20,21 @@
 $ mmm home Home // where home is the name of the lazy module you want to create with routing and route strings all done!
 
 ```
+
+> or [new Feature 25-02-2019], This assumed for now that you have some html file diplaying your navigations in a <ul> element. [it appends html to that file where it finds the ul elements], so you dont have to creat the link
+
+```
+mmm home Home path_to_your_html_navigation
+
+```
+
 #### This is what the script does
 
 * creates the module with angular cli's routing flag [basically this : ng g m home --routing]
 * creates a component which acts as the default loaded component inside the new lazy loaded module [ng g c modules/home] 
 * appends the default app-routing.module.ts file with the constructed string for a lazy loaded module's route path. so you dont h...a...v...e  t..o  t...y...p...e  o...u...t  s...o  m...u...c...h boilerplate code.
-  
+* and finally puts a link in the ul's that you have in some navigation component
+
  ```
  { path: 'home', loadChildren: 'modules/home/home.module#HomeModule'} // back in the day I had to manually do this for each module.
  ```
@@ -47,7 +56,7 @@ import {HomeComponent} from './home.component';
 Will Update the code ... handle just div, p, span, td,  [any tag can be used even custom components] 
 maybe concat to the past in args in the cpp....later 
 
-#### The files in this repo are just for my specific use cases (others may find them handy too )
+#### The files in this repo are just for my specific use cases (others may find them handy too please use at you own risk as this script modified you default cli generated files.)
 
 
 
