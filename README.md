@@ -56,7 +56,8 @@ import {HomeComponent} from './home.component';
 Will Update the code ... handle just div, p, span, td,  [any tag can be used even custom components] 
 maybe concat to the past in args in the cpp....later 
 
-#### The files in this repo are just for my specific use cases (others may find them handy too please use at you own risk as this script modified you default cli generated files.)
+#### The files in this repo are just for my specific use cases (others may find them handy too please use at 
+### your own risk as this script modifies you default cli generated files.)
 
 
 
