@@ -1,12 +1,10 @@
 # Some handy custom scripts and programs I made.
-#### Angular 2 to 7, Lazy module maker
-#### cpp wrap divs' spans' p elements around lines or words in a file. 
+#### 1.) Angular 2 to 7, Lazy module maker
+#### 2.) c++ console app that wraps divs' spans' p elements around lines or words in a file. 
 
-## Whats in here...
-1. Bash/... shell scripts I will place in here
+## Whats in here... [Tested and using on Mojave]
+1. bash/... shell scripts I will place in here
 2. cpp/... C++ programs and tools
-3. thisIsNotSafe.sh ... [more laziness ]
-
 
 ### Instructions for the bash script: 
 ` make_a_neat_angular_module.sh ` 
