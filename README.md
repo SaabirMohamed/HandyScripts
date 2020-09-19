@@ -44,7 +44,7 @@ import {HomeComponent} from './home.component';
 
 ```
 
-### Instrctions for programs the cpp folder:
+### Instructions for programs the cpp folder:
 1. ` wrapEachLineInHtml.cpp and the binary ./wrapEachLineInHtml `  
 * Syntax : ` $./wrapEachLineInHtml /<div/> /<p/> `
 2. ` wrapEachWordInHtml.cpp and the binary ./wrapEachWordInHtml `
@@ -55,7 +55,9 @@ Will Update the code ... handle just div, p, span, td,  [any tag can be used eve
 maybe concat to the past in args in the cpp....later 
 
 #### The files in this repo are just for my specific use cases (others may find them handy too please use at 
-### your own risk as this script modifies you default cli generated files.)
+### your own risk as this scripts modify your default cli generated files.)
 
-
+### Instructions for programs the misc folder:
+#### Just some handy files and scripts I keep around to quikly reset ethernet connection
+#### fix screen resolution problem on mac vm (works on Mojave and Calalina)
 
